@@ -7,7 +7,7 @@
         <methods>
           <include name="Browsersetup"/>
           <include name="browser_close"/>
-          <include name="Testbestbuy"/>
+          <include name="Signup"/>
         </methods>
       </class> <!-- ATecommerce_project.Proj1.Test1 -->
     </classes>

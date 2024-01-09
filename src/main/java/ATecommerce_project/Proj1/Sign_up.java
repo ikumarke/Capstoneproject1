@@ -1,8 +1,5 @@
 package ATecommerce_project.Proj1;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -56,6 +53,7 @@ public class Sign_up {
 	public void mobileno(CharSequence MOnumber) {
 		// TODO Auto-generated method stub
 		mobileno.sendKeys(MOnumber);
+		
 	}
 
 	public void clickcreateAcct() {
@@ -146,11 +144,11 @@ clickloginbtn.click();
 		    String nextHref = ele.get(i).getAttribute("href");
 		    isValid = getResponseCode(nextHref);
 		    if (isValid) {
-		        System.out.println("Valid Link:" + nextHref);
+		        System.out.println("Invalid Link:" + nextHref);
 
 		    }
 		    else {
-		        System.out.println("INVALID Link:" + nextHref);
+		        System.out.println("VALID Link:" + nextHref);
 
 		    }
 		}

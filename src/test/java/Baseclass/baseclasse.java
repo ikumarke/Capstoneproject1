@@ -1,7 +1,5 @@
 package Baseclass;
 
-import org.testng.annotations.BeforeMethod;
-
 import utlity.Utlity;
 
 import java.io.IOException;
@@ -19,6 +17,6 @@ public class baseclasse extends Utlity{
 	}
 		@AfterClass
 		public void browser_close() {
-			//driver.quit();
+			driver.quit();
 	        }
 	}

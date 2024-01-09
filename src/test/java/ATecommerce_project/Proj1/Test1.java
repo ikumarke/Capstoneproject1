@@ -10,7 +10,7 @@ import Baseclass.baseclasse;
 
 public class Test1 extends baseclasse {
 	@Test
-	public void Testbestbuy() throws IOException, InterruptedException {
+	public void Signup() throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 
 		Sign_up sign = new Sign_up(driver);
@@ -47,6 +47,49 @@ public class Test1 extends baseclasse {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			Navigationmenu n = new Navigationmenu(driver);
+			n.Bestbuyhomeretunbtn();
+			n.Menubutton();
+			Thread.sleep(5000);
+			n.Closemenubutton();
+			n.TopDealsmeunbtn();
+			n.TopDealheaderbtn();
+			driver.navigate().back();
+			n.Dealsofdaymeunbtn();
+			driver.navigate().back();
+			n.Bestbuymenubtn();
+			driver.navigate().back();
+			n.explicitWait();
+			n.scrolldown1();
+			Bottomlinks links = new Bottomlinks(driver);
+			links.webtable();
+			links.scrollup();
+			Thread.sleep(8000);
+			links.searchbtn(prop.getProperty("search"));
+			links.searchclkbtn();
+			links.Addtocartbtnclk();
+			Thread.sleep(5000);
+			links.continueshopping();
+			n.Menubutton();
+			links.Appliancesbtn();
+			links.smallappliences();
+			links.Airfrysbtn();
+			links.Outofstockfilterbtn();
+			links.pricedropcheckbox();
+			Thread.sleep(3000);
+			links.clickproducttoaddCart();
+			links.Addsecondproduct();
+			Thread.sleep(3000);
+			links.gotocart();
+			links.firstproductdisplayed();
+			links.Secondproductdisplayed();
+			Checkoutpayment c = new Checkoutpayment(driver);
+			c.Checkoutbtn();
+			c.Clkguestacct();
+			c.dummyemail(prop.getProperty("enteremail"));
+			c.dummypwd(prop.getProperty("mobileno"));
+			c.clkcheckbox();
+			c.continuepayment();
 
 		}
 
